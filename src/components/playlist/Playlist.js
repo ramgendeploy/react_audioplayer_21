@@ -2,9 +2,7 @@ import React, { useContext } from 'react'
 import playerContext from '../../context/playerContext'
 
 function Playlist() {
-  const { SetCurrent, currentSong, songs, songslist } = useContext(
-    playerContext,
-  )
+  const { SetCurrent, currentSong, songslist } = useContext(playerContext)
 
   return (
     <div className="playlist no_drag">
@@ -23,14 +21,18 @@ function Playlist() {
             <div className="tmbn_song">
               <i className="fas fa-play"></i>
             </div>
-            <div className="songmeta">
+            <div className="songmeta_playlist">
               <span className="songname">{song.title}</span>
               <span className="songauthors">{song.artistName}</span>
             </div>
-            {/* <span className="song_duration">{song[3]}</span> */}
-            <button className="fav_song">
-              <i className="far fa-heart fa-lg"></i>
-            </button>
+            <div className="playlist_btns_group">
+              <button className="fav_song playlist_btn">
+                <i className="far fa-heart fa-lg"></i>
+              </button>
+              <button className="options_song playlist_btn">
+                <i class="fas fa-ellipsis-v fa-lg"></i>
+              </button>
+            </div>
           </li>
         ))}
       </ul>
