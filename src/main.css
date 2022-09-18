@@ -329,6 +329,11 @@ display: flex;
 .songMeta{
   width: 25vw;
 }
+.songmeta_playlist{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 .songtitle{
   display: block;
   font-size: 1.125em;
@@ -350,6 +355,7 @@ display: flex;
 
 .plsoptions span {
   cursor: pointer;
+  border-bottom: 3px solid transparent;
 }
 
 .plsoptions span:hover {
@@ -357,7 +363,9 @@ display: flex;
 }
 
 .plsoptions span.active {
-  color: rgb(32, 77, 104);
+  color: rgb(95 181 233);
+  border-bottom: 3px solid rgb(95 181 233);
+  border-radius: 4px;
 }
 
 .currentT, .totalT {
